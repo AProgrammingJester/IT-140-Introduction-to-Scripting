@@ -18,7 +18,7 @@ def show_instructions():
     # Print the instructions for how to play the game.
     print('------------------------------', '\n', '*** INSTRUCTIONS ***', '\n',
           'To move about, type commands: go South, go North, go East, go West', '\n',
-          'To add an item to your inventory, type: get "item name" (without quotes)', '\n',
+          'To add an item to your inventory, type the word: get or grab and the "item name" (without quotes)', '\n',
           'To show the instructions again, type: instructions', '\n',
           'To quit the game, type: quit or exit', '\n', '------------------------------')
 
@@ -130,7 +130,7 @@ def main():
         item_to_get = ' '.join(move[1:]).lower() if len(move) >= 2 else None  # Get the item name after "get".
 
         # If the player types 'get' followed by the correct item name, pick it up.
-        if command == 'get' and item_to_get == item_name:
+        if command == 'get' or 'grab' and item_to_get == item_name:
             print(f'You picked up the {rooms[current_room]["item"]}')  # Notify the player.
             print('------------------------------')
             grab_item(current_room, rooms, inventory)  # Add the item to inventory and remove it from the room.
