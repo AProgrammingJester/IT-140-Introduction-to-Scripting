@@ -46,13 +46,13 @@ def main():
     # Dictionary defining the rooms and their connections. Each room contains directions and possibly an item.
     initial_rooms = {
         'Lobby': {'South': 'Bathroom', 'North': 'Dining room', 'West': 'Entry way', 'East': 'Kitchen'},
-        'Entry way': {'West': 'Lobby', 'item': 'Trash can'},
+        'Entry way': {'East': 'Lobby', 'item': 'Trash can'},
         'Dining room': {'South': 'Lobby', 'West': 'Library', 'item': 'Toilet brush'},
-        'Kitchen': {'West': 'Basement', 'East': 'Lobby', 'item': 'Bar of soap'},
+        'Kitchen': {'East': 'Basement', 'West': 'Lobby', 'item': 'Bar of soap'},
         'Library': {'East': 'Dining room', 'item': 'Toilet paper roll'},
-        'Basement': {'South': 'Garden', 'East': 'Kitchen', 'West': 'Evil Lair', 'item': 'Turd'},
-        'Garden': {'North': 'Basement', 'East': 'Bathroom', 'item': 'Rusty faucet'},
-        'Bathroom': {'North': 'Lobby', 'West': 'Garden', 'item': 'Plunger'},
+        'Basement': {'South': 'Garden', 'West': 'Kitchen', 'East': 'Evil Lair', 'item': 'Turd'},
+        'Garden': {'North': 'Basement', 'West': 'Bathroom', 'item': 'Rusty faucet'},
+        'Bathroom': {'North': 'Lobby', 'East': 'Garden', 'item': 'Plunger'},
         'Evil Lair': {}  # The Evil Lair is an end game, you will need all items to win, if you don't have all items you lose
     }
 
