@@ -45,7 +45,7 @@ def grab_item(current_room, rooms, inventory):
 def main():
     # Dictionary defining the rooms and their connections. Each room contains directions and possibly an item.
     initial_rooms = {
-        'Lobby': {'South': 'Bathroom', 'North': 'Dining room', 'East': 'Entry way', 'West': 'Kitchen'},
+        'Lobby': {'South': 'Bathroom', 'North': 'Dining room', 'West': 'Entry way', 'East': 'Kitchen'},
         'Entry way': {'West': 'Lobby', 'item': 'Trash can'},
         'Dining room': {'South': 'Lobby', 'West': 'Library', 'item': 'Toilet brush'},
         'Kitchen': {'West': 'Basement', 'East': 'Lobby', 'item': 'Bar of soap'},
